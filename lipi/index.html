@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OceanDev | Dive Into My Code</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bubbles" id="bubbles"></div>
+
+  <header class="navbar">
+    <a href="#home" class="logo">🌊 Ocean<span>Dev</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">🐚 WELCOME TO MY LITTLE OCEAN</span>
+        <h1>Hey, I'm <span class="gradient-text">Lipi Bujarbarua</span>!</h1>
+        <h2>Just a human who loves to <span id="changingWord">code</span> 🐬</h2>
+        <p>
+          Exploring the deep blue world of computer science, one line of
+          code at a time. Grab your snorkel and explore my little corner
+          of the internet!
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">Dive Into My Projects ↓</a>
+          <a href="#contact" class="btn secondary">Say Hello 🫧</a>
+        </div>
+        <div class="mini-stats">
+          <div><strong>06+</strong><span>Ocean-sized ideas</span></div>
+          <div><strong>∞</strong><span>Things to learn</span></div>
+          <div><strong>100%</strong><span>Curiosity</span></div>
+        </div>
+      </div>
+
+      <div class="ocean-art" aria-label="Decorative ocean illustration">
+        <div class="sun"></div>
+        <div class="fish fish-one">🐠</div>
+        <div class="fish fish-two">🐟</div>
+        <div class="fish fish-three">🐡</div>
+        <div class="jellyfish">🪼</div>
+        <div class="coral coral-one">🪸</div>
+        <div class="shell">🐚</div>
+        <div class="wave wave-one"></div>
+        <div class="wave wave-two"></div>
+        <div class="wave wave-three"></div>
+        <div class="floating-note">✦ stay curious ✦</div>
+      </div>
+      <a href="#projects" class="scroll-cue">SCROLL TO EXPLORE ↓</a>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="section-heading">
+        <span class="eyebrow">⚓ TREASURES FROM THE DEEP</span>
+        <h2>My <span class="gradient-text">Projects</span></h2>
+        <p>A few little experiments swimming around in my brain.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-art art-one">🌊<span>↗</span></div>
+          <div class="project-info">
+            <span class="tag">WEB DEVELOPMENT</span>
+            <h3>TideTask</h3>
+            <p>A calming productivity app that organizes tasks into daily tides, waves, and priorities.</p>
+            <div class="tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <button class="project-link" data-project="TideTask">Explore project ↗</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-two">🪼<span>↗</span></div>
+          <div class="project-info">
+            <span class="tag">DATA STRUCTURES</span>
+            <h3>DeepSort</h3>
+            <p>An interactive visualizer that brings sorting algorithms to life with colorful moving bars.</p>
+            <div class="tech"><span>JavaScript</span><span>Algorithms</span></div>
+            <button class="project-link" data-project="DeepSort">Explore project ↗</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-three">🐙<span>↗</span></div>
+          <div class="project-info">
+            <span class="tag">NETWORKING</span>
+            <h3>OctoNet</h3>
+            <p>A network traffic simulator that models packet queues, congestion, and packet drops.</p>
+            <div class="tech"><span>C</span><span>Queues</span><span>Networking</span></div>
+            <button class="project-link" data-project="OctoNet">Explore project ↗</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-four">🐳<span>↗</span></div>
+          <div class="project-info">
+            <span class="tag">DATABASES</span>
+            <h3>BlueShelf</h3>
+            <p>A digital library for tracking books, wishlists, reading progress, and recommendations.</p>
+            <div class="tech"><span>Java</span><span>SQL</span><span>OOP</span></div>
+            <button class="project-link" data-project="BlueShelf">Explore project ↗</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-five">🦈<span>↗</span></div>
+          <div class="project-info">
+            <span class="tag">CYBERSECURITY</span>
+            <h3>FinGuard</h3>
+            <p>A demo password-strength checker that explains common password weaknesses locally.</p>
+            <div class="tech"><span>JavaScript</span><span>Regex</span><span>Security</span></div>
+            <button class="project-link" data-project="FinGuard">Explore project ↗</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art art-six">🐬<span>↗</span></div>
+          <div class="project-info">
+            <span class="tag">SOCIAL IMPACT</span>
+            <h3>CoralConnect</h3>
+            <p>A community platform concept for reporting local issues and tracking their resolution.</p>
+            <div class="tech"><span>HTML</span><span>CSS</span><span>SQL</span></div>
+            <button class="project-link" data-project="CoralConnect">Explore project ↗</button>
+          </div>
+        </article>
+      </div>
+      <p class="project-note">These are portfolio project concepts — replace them with your actual work as you build it!</p>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-visual">
+        <div class="about-circle">
+          <span class="big-emoji">🐬</span>
+          <span class="orbit orbit-one">💻</span>
+          <span class="orbit orbit-two">✨</span>
+          <span class="orbit orbit-three">🫧</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">🪸 A LITTLE ABOUT ME</span>
+        <h2>Curious mind.<br><span class="gradient-text">Ocean-sized dreams.</span></h2>
+        <p>
+          I'm a computer science student who enjoys turning random ideas
+          into real things. I love solving problems, learning new
+          technologies, and discovering how things work beneath the surface.
+        </p>
+        <p>
+          My goal? Keep learning, build things that matter, and have a little
+          fun along the way. There's always another sea to explore!
+        </p>
+        <div class="skill-list">
+          <span>☕ Java</span><span>💻 C</span><span>🌐 HTML/CSS</span>
+          <span>⚡ JavaScript</span><span>🗄️ SQL</span><span>🧩 DSA</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-card">
+        <span class="eyebrow">🐳 SEND A MESSAGE IN A BOTTLE</span>
+        <h2>Let's make a <span class="gradient-text">splash!</span></h2>
+        <p>Have a cool idea, a project, or just want to say hi? My inbox is an ocean away.</p>
+        <a class="btn primary" href="mailto:your.email@example.com">Email Me 💌</a>
+        <div class="socials">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💙, a little code, and a whole lot of ocean energy.</p>
+    <p>© <span id="year"></span> OceanDev · Keep swimming 🫧</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
