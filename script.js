@@ -1,107 +1,87 @@
 
-// ================================
-// 1. MOBILE NAVIGATION
-// ================================
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const backToTop = document.getElementById("backToTop");
+const toast = document.getElementById("toast");
 
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
+// Mobile navigation
 menuToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("open");
-
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-
-    menuToggle.textContent = isOpen ? "✕" : "☰";
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Close the menu after a navigation link is selected.
-navMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
-        menuToggle.textContent = "☰";
-    });
+// Close menu after selecting a section
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
 });
 
+// Current year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// ================================
-// 2. AUTOMATIC COPYRIGHT YEAR
-// ================================
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-
-// ================================
-// 3. REVEAL ELEMENTS ON SCROLL
-// ================================
-
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-    revealElements.forEach((element) => {
-        revealObserver.observe(element);
-    });
-} else {
-    // Fallback for older browsers.
-    revealElements.forEach((element) => {
-        element.classList.add("visible");
-    });
-}
-
-
-// ================================
-// 4. BACK TO TOP BUTTON
-// ================================
-
-const backToTop = document.getElementById("back-to-top");
-
+// Back-to-top button
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 350) {
-        backToTop.classList.add("visible");
-    } else {
-        backToTop.classList.remove("visible");
-    }
-}, { passive: true });
+  backToTop.classList.toggle("visible", window.scrollY > 350);
+});
 
 backToTop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Rotating hero text
+const words = ["code", "create", "explore", "innovate", "dream"];
+const changingWord = document.getElementById("changingWord");
+let wordIndex = 0;
 
-// ================================
-// 5. NAVBAR SCROLL EFFECT
-// ================================
+setInterval(() => {
+  changingWord.style.opacity = "0";
 
-const navbar = document.querySelector(".navbar");
+  setTimeout(() => {
+    wordIndex = (wordIndex + 1) % words.length;
+    changingWord.textContent = words[wordIndex];
+    changingWord.style.opacity = "1";
+  }, 200);
+}, 2200);
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-        navbar.style.boxShadow =
-            "0 4px 20px rgba(20, 30, 55, 0.05)";
-    } else {
-        navbar.style.boxShadow = "none";
-    }
-}, { passive: true });
+// Project buttons: demo interaction until real links are added
+let toastTimeout;
+
+document.querySelectorAll(".project-link").forEach(button => {
+  button.addEventListener("click", () => {
+    const projectName = button.dataset.project;
+
+    toast.textContent =
+      `🐚 ${projectName} is a project concept! Add your GitHub or live demo link here.`;
+
+    toast.classList.add("show");
+    clearTimeout(toastTimeout);
+
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  });
+});
+
+// Generate floating ocean bubbles
+const bubbleContainer = document.getElementById("bubbles");
+
+for (let i = 0; i < 22; i++) {
+  const bubble = document.createElement("span");
+  const size = Math.random() * 24 + 8;
+
+  bubble.className = "bubble";
+  bubble.style.width = `${size}px`;
+  bubble.style.height = `${size}px`;
+  bubble.style.left = `${Math.random() * 100}%`;
+  bubble.style.animationDuration = `${Math.random() * 12 + 9}s`;
+  bubble.style.animationDelay = `${Math.random() * -20}s`;
+
+  bubbleContainer.appendChild(bubble);
+}
+
+console.log("🌊 Welcome to OceanDev!");
+console.log("🐬 Keep swimming, keep coding.");
