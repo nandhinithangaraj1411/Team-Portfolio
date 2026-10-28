@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sonika · AI that repairs, explains and reveals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bub" aria-hidden="true"></canvas>
+<aside class="gauge" aria-hidden="true"><div class="track"><div class="dot" id="dot"></div></div><div class="read"><b id="gd">0 m</b><span id="gt">28.0 °C</span><i id="gz">Sunlight zone</i><em id="bp"></em></div></aside>
+
+<div class="wrap">
+<nav aria-label="Primary"><span>Sonika</span><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#contact">Contact</a></div></nav>
+
+<main>
+<div class="hero">
+  <p class="kicker">Hi, I’m Sonika · CSE student at RVCE</p>
+  <h1>I teach machines to fill in what’s missing.</h1>
+  <p class="sub">I’m a second-year engineer who builds AI with Python and C. I fix broken images, make code easier to understand, and estimate what’s happening deep in the ocean. Scroll down and the gauge on the side takes you from the sunlit surface into the deep.</p>
+  <div class="cta"><a class="btn" href="#work">See my projects</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+  <div class="trio">
+    <a href="#card-repair" style="--c:var(--coral)"><b>Repair</b><span>Detect damaged images and rebuild them.</span></a>
+    <a href="#card-viz" style="--c:var(--violet)"><b>Explain</b><span>Turn code into pictures that make sense.</span></a>
+    <a href="#card-ocean" style="--c:var(--aqua)"><b>Reveal</b><span>Estimate the ocean below what satellites see.</span></a>
+  </div>
+  <p class="dive">scroll to dive ↓</p>
+</div>
+
+<section id="about" aria-labelledby="about-h">
+  <h2 id="about-h">About me</h2>
+  <p class="zone">Sunlight zone, 0–200 m</p>
+  <div class="about">
+    <div>
+      <p>I’m Sonika, a second-year Computer Science and Engineering student at RVCE who gets happiest when a half-broken idea finally runs.</p>
+      <p>I’m drawn to problems where something is missing: a damaged image, a confusing piece of code, or the temperature of water no satellite can see. The job is to work out what belongs there and build a system that can do it reliably.</p>
+      <p>I started with programming fundamentals in C and Python, and AI turned those skills into something I could point at real problems. Each project I’ve built so far taught me something different: low-level control, clear explanation and working with large scientific data.</p>
+      <p>Right now I’m going deeper into AI, writing tighter C, and learning how to turn a trained model into something people can actually use.</p>
+      <p>Away from the keyboard, I sing and I dance.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Always building</b><span>I learn fastest by making something real.</span></li>
+      <li><b>Debugger by nature</b><span>A confusing bug is my favourite kind of puzzle.</span></li>
+      <li><b>Curious about everything AI</b><span>How machines see, explain and predict.</span></li>
+      <li><b>Looking ahead</b><span>Hackathons, open source and research are on my list.</span></li>
+    </ul>
+  </div>
+  <h3 class="sh">Beyond the code</h3>
+  <div class="grid3">
+    <div class="tile"><b>Coding</b><span>Python and C are my everyday tools, and building things is how I relax and learn at the same time.</span></div>
+    <div class="tile"><b>Singing</b><span>Music is a big part of my life, and I love to sing.</span></div>
+    <div class="tile"><b>Dancing</b><span>I dance for the rhythm and the energy.</span></div>
+  </div>
+  <h3 class="sh">How I work</h3>
+  <div class="grid3">
+    <div class="tile"><b>Start with the problem</b><span>I try to understand what’s actually broken before I pick a model.</span></div>
+    <div class="tile"><b>Make it visible</b><span>If I can’t see what a system is doing, I can’t trust it. I like diagrams, plots and dashboards.</span></div>
+    <div class="tile"><b>Build, then refine</b><span>Get something working end to end first, then improve it piece by piece.</span></div>
+  </div>
+  <h3 class="sh">What I’m exploring now</h3>
+  <div class="grid3">
+    <div class="tile"><b>Deep learning</b><span>Getting better at designing and training models that generalise.</span></div>
+    <div class="tile"><b>Computer vision</b><span>How machines detect problems in images and fix them.</span></div>
+    <div class="tile"><b>Full-stack AI</b><span>Taking a model from a notebook to a live dashboard.</span></div>
+  </div>
+</section>
+
+<section id="skills" aria-labelledby="skills-h">
+  <h2 id="skills-h">Skills</h2>
+  <p class="zone">Twilight zone, 200–1000 m</p>
+  <p class="sub" style="margin:0">Python and C are where I think in code. AI is what I use them for.</p>
+  <div class="skills" role="group" aria-label="Filter projects by skill">
+    <button type="button" aria-pressed="false" data-s="python">Python</button>
+    <button type="button" aria-pressed="false" data-s="c">C programming</button>
+    <button type="button" aria-pressed="false" data-s="ai">Artificial intelligence</button>
+    <button type="button" aria-pressed="false" data-s="web">FastAPI and React</button>
+  </div>
+  <p class="hint">Tap a skill to light up the projects that use it.</p>
+</section>
+
+<section id="work" aria-labelledby="work-h">
+  <h2 id="work-h">Projects</h2>
+  <p class="zone">Midnight zone, 1000 m and below</p>
+  <div class="cards">
+    <article class="card" id="card-repair" style="--c:var(--coral)" data-s="c ai">
+      <h3>Image corruption detection and repair</h3>
+      <p class="what">Written in C · AI-based</p>
+      <div class="demo"><canvas id="rc" width="320" height="160" role="img" aria-label="A small picture with corrupted blocks of colourful noise"></canvas><div class="dctl"><p class="dt">Try it: damage a picture, then repair it.</p><button class="btn sm" id="rfix" type="button">Detect and repair</button><button class="btn sm ghost" id="radd" type="button">Add damage</button><p class="stat" id="rs" aria-live="polite"></p></div></div>
+      <div class="cols">
+        <div>
+          <h4>The problem</h4>
+          <p>Images get damaged by lost data, noise or bad transfers, and the damage is often hard to spot automatically, let alone fix.</p>
+          <h4>The idea</h4>
+          <p>Build a system that can tell which parts of an image are corrupted, then rebuild them. Writing it in C means every step, from reading pixels to restoring them, is under my control.</p>
+        </div>
+        <div>
+          <h4>How it works</h4>
+          <ol><li>Read the image at pixel level.</li><li>Detect which regions are corrupted.</li><li>Repair those regions using AI.</li></ol>
+          <h4>Built with</h4>
+          <ul class="chips"><li>C</li><li>Image processing</li><li>AI</li></ul>
+        </div>
+      </div>
+    </article>
+    <article class="card" id="card-viz" style="--c:var(--violet)" data-s="ai">
+      <h3>AETHRA-VIZ</h3>
+      <p class="what">AI visualizer for learning code</p>
+      <div class="demo"><div><div class="code" id="vc"></div><div class="vars"><div class="v" id="vt">total<b>–</b></div><div class="v" id="vi">i<b>–</b></div><div class="v" id="vo">output<b>–</b></div></div></div><div class="dctl"><p class="dt">Try it: step through a tiny program and watch what changes.</p><button class="btn sm" id="vs" type="button">Step</button><button class="btn sm ghost" id="va" type="button">Auto-play</button><button class="btn sm ghost" id="vr" type="button">Reset</button><p class="stat" id="vd" aria-live="polite">Press Step to run the first line.</p></div></div>
+      <div class="cols">
+        <div>
+          <h4>The problem</h4>
+          <p>Beginners often learn code by staring at lines of text and guessing what happens when it runs. That’s slow and discouraging.</p>
+          <h4>The idea</h4>
+          <p>Use AI to turn code into visuals, so learners can see how it behaves instead of imagining it. It makes learning to code feel more like watching an idea unfold.</p>
+        </div>
+        <div>
+          <h4>How it works</h4>
+          <ol><li>Take a piece of code.</li><li>Let the AI work out what it does.</li><li>Show it as a visual explanation.</li></ol>
+          <h4>Built with</h4>
+          <ul class="chips"><li>AI</li><li>Visualization</li><li>Code learning</li></ul>
+        </div>
+      </div>
+    </article>
+    <article class="card" id="card-ocean" style="--c:var(--aqua)" data-s="python ai web">
+      <h3>OceanEmbed-NIO</h3>
+      <p class="what">Deep learning on satellite data</p>
+      <div class="demo"><div class="col" id="oc"><div class="cover" aria-hidden="true">?</div><div class="mk" id="omk"></div></div><div class="dctl"><p class="dt">Try it: a satellite only sees the surface. Drag the depth, then reconstruct what’s below.</p><label for="od" style="flex-basis:100%">Depth: <strong id="odv">0 m</strong></label><input id="od" type="range" min="0" max="1000" step="10" value="0" style="flex-basis:100%;accent-color:var(--c)"><button class="btn sm" id="orb" type="button">Reconstruct below</button><p class="stat" id="oo"></p></div></div>
+      <div class="cols">
+        <div>
+          <h4>The problem</h4>
+          <p>Satellites can only observe the ocean’s surface, but a lot of what matters, like heat stored below, happens at depth.</p>
+          <h4>The idea</h4>
+          <p>Use satellite embeddings, which are compact numerical summaries of surface data, and a deep learning framework to reconstruct subsurface ocean temperature.</p>
+          <h4>What I built</h4>
+          <p>I trained the temperature models in Google Colab and combined two of them, versions 3 and 4, into an ensemble that leans toward version 4. A FastAPI backend serves them to a React dashboard with Explore, Sections and Validate views. I’m now adding marine heat events and cyclone thermal context using IBTrACS storm-track data.</p>
+        </div>
+        <div>
+          <h4>How it works</h4>
+          <ol><li>Collect surface satellite data.</li><li>Turn it into embeddings.</li><li>Train deep models to predict temperature below the surface.</li><li>Combine two trained models into an ensemble.</li><li>Serve the results through a FastAPI and React dashboard.</li></ol>
+          <h4>Built with</h4>
+          <ul class="chips"><li>Deep learning</li><li>Satellite data</li><li>Google Colab</li><li>FastAPI</li><li>React</li><li>IBTrACS</li></ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h">Contact</h2>
+  <p class="zone">Abyssal zone, you made it</p>
+  <p class="sub" style="margin:0">Got an idea, a project or an opportunity? I’d love to hear about it.</p>
+  <div class="links"><span class="soon">Email · coming soon</span><span class="soon">GitHub · coming soon</span><span class="soon">LinkedIn · coming soon</span></div>
+</section>
+</main>
+<footer>© 2026 Sonika. Try popping the bubbles, or click the depth gauge to jump. The gauge and the ocean demo show illustrative temperatures, not real model output.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
