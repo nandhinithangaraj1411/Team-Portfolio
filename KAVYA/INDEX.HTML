@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal developer portfolio showcasing projects, skills, and education.">
+  <title>Kavya | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="#home"><span class="brand-icon">K</span> KAVYA </a>
+
+      <div class="profile-mini">
+        <div class="avatar">K</div>
+        <h3>Kavya Manihar</h3>
+        <p>Computer Science Student</p>
+        <span class="status"><span></span> Open to opportunities</span>
+      </div>
+
+      <p class="nav-heading">WORKSPACE</p>
+      <nav class="navigation" aria-label="Main navigation">
+        <a class="nav-link active" href="#home"><span>⌂</span> Overview</a>
+        <a class="nav-link" href="#projects"><span>▤</span> Projects</a>
+        <a class="nav-link" href="#skills"><span>◈</span> Skills</a>
+        <a class="nav-link" href="#education"><span>▣</span> Education</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <p class="nav-heading">LET'S CONNECT</p>
+        <a class="nav-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">↗ GitHub</a>
+        <a class="nav-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">↗ LinkedIn</a>
+        <a class="nav-link" href="mailto:your.email@example.com">✉ Email me</a>
+      </div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">MY WORKSPACE / OVERVIEW</p>
+          <h2>Developer Dashboard</h2>
+        </div>
+        <a class="github-button" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <span>↗</span> GitHub Profile
+        </a>
+      </header>
+
+      <section class="welcome reveal">
+        <div class="welcome-copy">
+          <span class="pill"><span class="live-dot"></span> WELCOME TO MY SPACE</span>
+          <h1>Building ideas<br>into <span>reality.</span></h1>
+          <p>Hi, I'm Kavya — a Computer Science student who enjoys solving problems, exploring technology, and building useful things with code.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#projects">Explore my work <span>→</span></a>
+            <a class="text-button" href="#education">My journey ↗</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="code-card">
+            <div class="window-dots"><i></i><i></i><i></i><span>developer.js</span></div>
+            <pre><span class="code-purple">const</span> developer = {
+  name: <span class="code-green">"Kavya"</span>,
+  passion: <span class="code-green">"Building"</span>,
+  learning: <span class="code-green">"Every day"</span>,
+  status: <span class="code-blue">true</span>
+};
+
+<span class="code-purple">while</span> (curious) {
+  keepBuilding();
+}</pre>
+          </div>
+          <div class="floating-chip chip-top">✦ Always learning</div>
+          <div class="floating-chip chip-bottom">{"</>"} Code with purpose</div>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Portfolio highlights">
+        <article class="stat-card reveal">
+          <div class="stat-icon purple">▤</div>
+          <p>Featured projects</p>
+          <h3>03 <span>+</span></h3>
+          <small>Ideas turned into code</small>
+        </article>
+        <article class="stat-card reveal">
+          <div class="stat-icon green">⌘</div>
+          <p>Technologies</p>
+          <h3>06 <span>+</span></h3>
+          <small>Tools I'm exploring</small>
+        </article>
+        <article class="stat-card reveal">
+          <div class="stat-icon orange">✧</div>
+          <p>Current focus</p>
+          <h3 class="focus-value">Full Stack</h3>
+          <small>Learning by building</small>
+        </article>
+      </section>
+
+      
+<section class="section reveal" id="projects">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">THINGS I'VE BUILT</p>
+      <h2>Featured Projects</h2>
+    </div>
+    <span class="section-note">Ideas turned into reality</span>
+  </div>
+
+  <div class="project-grid">
+
+    <!-- Project 1: Image Healer -->
+    <article class="project-card">
+      <div class="project-visual visual-purple">
+        <span class="project-symbol">✧</span>
+        <span class="visual-tag">01 / IMAGE PROCESSING</span>
+        <div class="visual-orb"></div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-title">
+          <h3>Image Healer</h3>
+          <span class="project-number">01</span>
+        </div>
+
+        <p>
+          An image restoration project that reduces noise in images
+          using a 3×3 median filter and image-processing techniques.
+        </p>
+
+        <div class="tags">
+          <span>C</span>
+          <span>BMP Processing</span>
+          <span>Algorithms</span>
+        </div>
+
+        <a class="project-link"
+           href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View project <span>↗</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 2: Aethra-Viz -->
+    <article class="project-card">
+      <div class="project-visual visual-green">
+        <span class="project-symbol">◈</span>
+        <span class="visual-tag">02 / AI & EDUCATION</span>
+        <div class="visual-orb"></div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-title">
+          <h3>Aethra-Viz</h3>
+          <span class="project-number">02</span>
+        </div>
+
+        <p>
+          An AI-powered interactive learning visualizer that helps
+          beginners understand C and Python through guided questions,
+          hints, and visual explanations.
+        </p>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>Streamlit</span>
+          <span>Gemini</span>
+          <span>RAG</span>
+        </div>
+
+        <a class="project-link"
+           href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View project <span>↗</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 3: HAMMER -->
+    <article class="project-card">
+      <div class="project-visual visual-orange">
+        <span class="project-symbol">⌘</span>
+        <span class="visual-tag">03 / AUTOMATION</span>
+        <div class="visual-orb"></div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-title">
+          <h3>HAMMER</h3>
+          <span class="project-number">03</span>
+        </div>
+
+        <p>
+          A human-aware industrial automation system designed to
+          monitor machine conditions and human intent to support
+          safer machine operation.
+        </p>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>ESP32</span>
+          <span>Sensors</span>
+          <span>Streamlit</span>
+        </div>
+
+        <a class="project-link"
+           href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View project <span>↗</span>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section reveal" id="skills">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">WHAT I WORK WITH</p>
+            <h2>My Skills</h2>
+        </div>
+        <span class="section-note">Always learning and improving</span>
+    </div>
+
+    <div class="skills-grid">
+
+        <article class="skill-card">
+            <div class="skill-icon skill-purple">C</div>
+            <h3>C Programming</h3>
+            <p>Programming fundamentals, pointers, arrays and data structures.</p>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%;"></div>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <div class="skill-icon skill-blue">Py</div>
+            <h3>Python</h3>
+            <p>Basic programming, problem-solving and working with libraries.</p>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 60%;"></div>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <div class="skill-icon skill-orange">HTML</div>
+            <h3>HTML</h3>
+            <p>Creating web pages with structured and meaningful content.</p>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%;"></div>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <div class="skill-icon skill-pink">CSS</div>
+            <h3>CSS</h3>
+            <p>Styling websites with layouts, colours and responsive design.</p>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 60%;"></div>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <div class="skill-icon skill-green">DSA</div>
+            <h3>Data Structures</h3>
+            <p>Learning stacks, queues, linked lists, trees and algorithms.</p>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 65%;"></div>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <div class="skill-icon skill-yellow">Git</div>
+            <h3>Git & GitHub</h3>
+            <p>Version control, repositories and collaborative development.</p>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 55%;"></div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Get In Touch</h2>
+    <p>Want to collaborate on a project or connect with me?</p>
+
+    <div class="contact-links">
+        <a href="https://github.com/KavyaMANIHAR"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-btn">
+            Visit My GitHub
+        </a>
+
+        <a href="mailto:kavyamanihar@gmail.com"
+           class="contact-btn">
+            Email Me
+        </a>
+    </div>
+</section>
